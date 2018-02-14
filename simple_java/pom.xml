@@ -7,6 +7,32 @@
   <version>1.0</version>
   <name>simple_java</name>
   <url>http://maven.apache.org</url>
+  
+  <scm>
+        <connection>scm:git:https://github.com/srinu1913/mav.git</connection>
+        <developerConnection>scm:git:https://github.com/srinu1913/mav.git</developerConnection>
+      <tag>HEAD</tag>
+  </scm>
+	<build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-release-plugin</artifactId>
+        <version>2.5.3</version>
+      </plugin>
+    </plugins>
+  </build>
+  
+  <distributionManagement>
+    <repository>
+    <id>releases</id>
+    <url>http://192.168.1.38:8080/nexus/content/repositories/releases</url>
+    </repository>
+    <snapshotRepository>
+    <id>snapshots</id>
+    <url>http://192.168.1.38:8080/nexus/content/repositories/snapshots</url>
+    </snapshotRepository>
+  </distributionManagement>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
